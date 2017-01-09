@@ -25,6 +25,7 @@ class SynchronizedQueue {
      
      - returns: True if the object adds successfully, false otherwise.
      */
+    @discardableResult
     func enqueue(_ obj:AnyObject) -> Bool {
         var result = true
         self.lock.lock()

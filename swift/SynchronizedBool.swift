@@ -31,6 +31,7 @@ open class SynchronizedBool {
      
      - returns: False if the value was already true, true otherwise.
      */
+    @discardableResult
     open func makeTrue () -> Bool {
         var changed = true
         self.lock.lock()
@@ -48,6 +49,7 @@ open class SynchronizedBool {
      
      - returns: False if the value was already false, true otherwise.
      */
+    @discardableResult
     open func makeFalse () -> Bool {
         var changed = true
         self.lock.lock()
